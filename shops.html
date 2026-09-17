@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>店舗一覧｜整体 Core Life</title>
+
+    <meta
+        name="description"
+        content="整体 Core Lifeの店舗一覧。お近くの店舗を検索できます。"
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shops.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="Core Life ロゴ">
+        </a>
+
+        <nav class="pc-nav">
+
+            <a href="shops.html">
+                店舗一覧
+            </a>
+
+            <a href="index.html#about">
+                Core Lifeについて
+            </a>
+
+            <a href="index.html#menu">
+                メニュー・料金
+            </a>
+
+            <a href="index.html#point">
+                選ばれる理由
+            </a>
+
+            <a href="index.html#news">
+                お知らせ
+            </a>
+
+        </nav>
+
+        <a href="#" class="header-reserve">
+            予約する
+        </a>
+
+        <button class="menu-button" id="menuButton">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+
+    <nav>
+
+        <a href="shops.html">
+            店舗一覧
+        </a>
+
+        <a href="index.html#about">
+            Core Lifeについて
+        </a>
+
+        <a href="index.html#menu">
+            メニュー・料金
+        </a>
+
+        <a href="index.html#point">
+            選ばれる理由
+        </a>
+
+        <a href="index.html#news">
+            お知らせ
+        </a>
+
+        <a href="#" class="mobile-reserve">
+            ご予約はこちら
+        </a>
+
+    </nav>
+
+</div>
+
+
+<main>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+
+    <div class="page-hero-inner">
+
+        <p>
+            SHOP LIST
+        </p>
+
+        <h1>
+            店舗一覧
+        </h1>
+
+        <span>
+            お近くのCore Lifeを探す
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+
+    <div class="container">
+
+        <a href="index.html">
+            TOP
+        </a>
+
+        <span>→</span>
+
+        <span>
+            店舗一覧
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- SHOP SEARCH -->
+<section class="shop-search">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <p class="heading-en">
+                FIND YOUR CORE LIFE
+            </p>
+
+            <h2>
+                お近くの店舗を探す
+            </h2>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <div class="search-field">
+
+                <label for="prefecture">
+                    都道府県
+                </label>
+
+                <select id="prefecture">
+
+                    <option value="all">
+                        すべて
+                    </option>
+
+                    <option value="shiga">
+                        滋賀県
+                    </option>
+
+                    <option value="osaka">
+                        大阪府
+                    </option>
+
+                    <option value="tokyo">
+                        東京都
+                    </option>
+
+                    <option value="kumamoto">
+                        熊本県
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="search-field">
+
+                <label for="area">
+                    エリア
+                </label>
+
+                <select id="area">
+
+                    <option value="all">
+                        すべて
+                    </option>
+
+                    <option value="hikone">
+                        彦根市
+                    </option>
+
+                    <option value="higashiomi">
+                        東近江市
+                    </option>
+
+                    <option value="ritto">
+                        栗東市
+                    </option>
+
+                    <option value="minoh">
+                        箕面市
+                    </option>
+
+                    <option value="nishi-tokyo">
+                        西東京市
+                    </option>
+
+                    <option value="yatsushiro">
+                        八代市
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                type="button"
+                id="searchButton"
+                class="search-button"
+            >
+                店舗を検索
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SHOP LIST -->
+<section class="shops-section">
+
+    <div class="container">
+
+        <div class="shop-result-header">
+
+            <p>
+                <span id="resultCount">4</span>
+                店舗
+            </p>
+
+        </div>
+
+
+        <div class="shop-grid" id="shopGrid">
+
+
+            <!-- SHOP 01 -->
+            <article
+                class="shop-card"
+                data-prefecture="shiga"
+                data-area="hikone"
+            >
+
+                <div class="shop-image">
+
+                    <img
+                        src="images/shop-01.jpg"
+                        alt="整体Core Life 彦根院"
+                    >
+
+                    <span class="shop-label">
+                        滋賀県
+                    </span>
+
+                </div>
+
+
+                <div class="shop-body">
+
+                    <p class="shop-area">
+                        滋賀県・彦根市
+                    </p>
+
+                    <h2>
+                        整体Core Life 彦根院
+                    </h2>
+
+
+                    <div class="shop-info">
+
+                        <div>
+                            <span>ADDRESS</span>
+
+                            <p>
+                                滋賀県彦根市平田町378-1
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>ACCESS</span>
+
+                            <p>
+                                南彦根駅 徒歩5分
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>OPEN</span>
+
+                            <p>
+                                9:00〜20:00
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>TEL</span>
+
+                            <p>
+                                <a href="tel:08089421161">080-8942-1161</a>
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="shop-buttons">
+
+                        <a
+                            href="shop-detail.html?shop=hikone"
+                            class="detail-button"
+                        >
+                            店舗詳細
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="reserve-button"
+                        >
+                            予約する
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- SHOP 02 -->
+            <article
+                class="shop-card"
+                data-prefecture="shiga"
+                data-area="higashiomi"
+            >
+
+                <div class="shop-image">
+
+                    <img
+                        src="images/shop-02.jpg"
+                        alt="整体Core Life まい整体院"
+                    >
+
+                    <span class="shop-label">
+                        滋賀県
+                    </span>
+
+                </div>
+
+
+                <div class="shop-body">
+
+                    <p class="shop-area">
+                        滋賀県・東近江市
+                    </p>
+
+                    <h2>
+                        整体Core Life まい整体院
+                    </h2>
+
+
+                    <div class="shop-info">
+
+                        <div>
+                            <span>ADDRESS</span>
+
+                            <p>
+                                滋賀県東近江市垣見町588−1
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>ACCESS</span>
+
+                            <p>
+                                能登川駅 徒歩5分
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>OPEN</span>
+
+                            <p>
+                                9:00〜20:00
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>TEL</span>
+
+                            <p>
+                                <a href="tel:07031521364">070-3152-1364</a>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="shop-buttons">
+
+                        <a
+                            href="https://mai-seitaiin.com/"
+                            class="detail-button"
+                        >
+                            店舗詳細
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="reserve-button"
+                        >
+                            予約する
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- SHOP 03 -->
+            <article
+                class="shop-card"
+                data-prefecture="shiga"
+                data-area="rittoh"
+            >
+
+                <div class="shop-image">
+
+                    <img
+                        src="images/shop-03.jpg"
+                        alt="整体Core Life さつき整体院"
+                    >
+
+                    <span class="shop-label">
+                        滋賀県
+                    </span>
+
+                </div>
+
+
+                <div class="shop-body">
+
+                    <p class="shop-area">
+                        滋賀県・栗東市
+                    </p>
+
+                    <h2>
+                        整体Core Life さつき整体院
+                    </h2>
+
+
+                    <div class="shop-info">
+
+                        <div>
+                            <span>ADDRESS</span>
+
+                            <p>
+                                滋賀県栗東市小柿6-9-22
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>ACCESS</span>
+
+                            <p>
+                                JR栗東駅 徒歩5分
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>OPEN</span>
+
+                            <p>
+                                9:00〜20:00
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>TEL</span>
+
+                            <p>
+                                <a href="tel:09039779526">090-3977-9526</a>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="shop-buttons">
+
+                        <a
+                            href="shop-detail.html?shop=rittoh"
+                            class="detail-button"
+                        >
+                            店舗詳細
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="reserve-button"
+                        >
+                            予約する
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SHOP 04 -->
+            <article
+                class="shop-card"
+                data-prefecture="shiga"
+                data-area="higashiomi"
+            >
+
+                <div class="shop-image">
+
+                    <img
+                        src="images/shop-04.jpg"
+                        alt="整体Core Life よつば整体院"
+                    >
+
+                    <span class="shop-label">
+                        滋賀県
+                    </span>
+
+                </div>
+
+
+                <div class="shop-body">
+
+                    <p class="shop-area">
+                        滋賀県・東近江市
+                    </p>
+
+                    <h2>
+                        整体Core Life よつば整体院
+                    </h2>
+
+
+                    <div class="shop-info">
+
+                        <div>
+                            <span>ADDRESS</span>
+
+                            <p>
+                                滋賀県東近江市山上町3597-3
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>ACCESS</span>
+
+                            <p>
+                                JR能登川駅 徒歩7分
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>OPEN</span>
+
+                            <p>
+                                9:00〜20:00
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>TEL</span>
+
+                            <p>
+                                <a href="tel:08014186246">080-1418-6246</a>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="shop-buttons">
+
+                        <a
+                            href="shop-detail.html?shop=higashiomi"
+                            class="detail-button"
+                        >
+                            店舗詳細
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="reserve-button"
+                        >
+                            予約する
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SHOP 05  -->
+            <article
+                class="shop-card"
+                data-prefecture="tokyo"
+                data-area="nishi-tokyo"
+            >
+
+                <div class="shop-image">
+
+                    <img
+                        src="images/shop-05.jpg"
+                        alt="整体Core Life 鍼灸マッサージ治療室とつかや"
+                    >
+
+                    <span class="shop-label">
+                        東京都
+                    </span>
+
+                </div>
+
+
+                <div class="shop-body">
+
+                    <p class="shop-area">
+                        東京都・西東京市
+                    </p>
+
+                    <h2>
+                        整体Core Life 鍼灸マッサージ治療室とつかや
+                    </h2>
+
+
+                    <div class="shop-info">
+
+                        <div>
+                            <span>ADDRESS</span>
+
+                            <p>
+                                東京都西東京市田無町3-3-7 海老沢第一ビル505
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>ACCESS</span>
+
+                            <p>
+                                田無駅 徒歩5分
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>OPEN</span>
+
+                            <p>
+                                9:00〜20:00
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>TEL</span>
+
+                            <p>
+                                <a href="tel:0424525480">042-452-5480</a>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="shop-buttons">
+
+                        <a
+                            href="shop-detail.html?shop=nishi-tokyo"
+                            class="detail-button"
+                        >
+                            店舗詳細
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="reserve-button"
+                        >
+                            予約する
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SHOP 06 -->
+            <article
+                class="shop-card"
+                data-prefecture="osaka"
+                data-area="minoh"
+            >
+
+                <div class="shop-image">
+
+                    <img
+                        src="images/shop-06.jpg"
+                        alt="整体Core Life Minohけいすけ整体院"
+                    >
+
+                    <span class="shop-label">
+                        大阪府
+                    </span>
+
+                </div>
+
+
+                <div class="shop-body">
+
+                    <p class="shop-area">
+                        大阪府・箕面市
+                    </p>
+
+                    <h2>
+                        整体Core Life Minohけいすけ整体院
+                    </h2>
+
+
+                    <div class="shop-info">
+
+                        <div>
+                            <span>ADDRESS</span>
+
+                            <p>
+                                大阪府箕面市箕面7-1-14 リッツ箕面301
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>ACCESS</span>
+
+                            <p>
+                                箕面駅 徒歩5分
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>OPEN</span>
+
+                            <p>
+                                9:00〜20:00
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>TEL</span>
+
+                            <p>
+                                <a href="tel:08056020009">080-5602-0009</a>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="shop-buttons">
+
+                        <a
+                            href="shop-detail.html?shop=minoh"
+                            class="detail-button"
+                        >
+                            店舗詳細
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="reserve-button"
+                        >
+                            予約する
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SHOP 07 -->
+            <article
+                class="shop-card"
+                data-prefecture="kumamoto"
+                data-area="yatsushiro"
+            >
+
+                <div class="shop-image">
+
+                    <img
+                        src="images/shop-07.jpg"
+                        alt="整体Core Life 道田整体院"
+                    >
+
+                    <span class="shop-label">
+                        熊本県
+                    </span>
+
+                </div>
+
+
+                <div class="shop-body">
+
+                    <p class="shop-area">
+                        熊本県・八代市
+                    </p>
+
+                    <h2>
+                        整体Core Life 道田整体院
+                    </h2>
+
+
+                    <div class="shop-info">
+
+                        <div>
+                            <span>ADDRESS</span>
+
+                            <p>
+                                熊本県八代市古城町1981-1
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>ACCESS</span>
+
+                            <p>
+                                八代駅 徒歩5分
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>OPEN</span>
+
+                            <p>
+                                9:00〜20:00
+                            </p>
+                        </div>
+
+
+                        <div>
+                            <span>TEL</span>
+
+                            <p>
+                                <a href="tel:06095979811">060-9597-9811</a>
+                            </p>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="shop-buttons">
+
+                        <a
+                            href="shop-detail.html?shop=kumamoto"
+                            class="detail-button"
+                        >
+                            店舗詳細
+                            <span>→</span>
+                        </a>
+
+                        <a
+                            href="#"
+                            class="reserve-button"
+                        >
+                            予約する
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </div>
+
+
+        <!-- NO RESULT -->
+        <div
+            class="no-result"
+            id="noResult"
+        >
+
+            <p>
+                条件に一致する店舗が見つかりませんでした。
+            </p>
+
+            <button id="resetButton">
+                条件をリセット
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="shop-cta">
+
+    <div class="container">
+
+        <p>
+            RESERVATION
+        </p>
+
+        <h2>
+            お近くのCore Lifeで<br>
+            お身体をご相談ください。
+        </h2>
+
+        <a href="#" class="cta-button">
+            WEB予約はこちら
+            <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    <span class="logo-text">
+                        <span class="logo-main">
+                            Core Life
+                        </span>
+
+                        <span class="logo-sub">
+                            整体 CORE LIFE
+                        </span>
+                    </span>
+
+                </div>
+
+                <p>
+                    あなたの身体を、<br>
+                    本来の状態へ。
+                </p>
+
+            </div>
+
+
+            <div class="footer-nav">
+
+                <a href="index.html#about">
+                    Core Lifeについて
+                </a>
+
+                <a href="index.html#menu">
+                    メニュー・料金
+                </a>
+
+                <a href="index.html#point">
+                    選ばれる理由
+                </a>
+
+                <a href="shops.html">
+                    店舗一覧
+                </a>
+
+                <a href="index.html#news">
+                    お知らせ
+                </a>
+
+                <a href="index.html#access">
+                    アクセス
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © Core Life All Rights Reserved.
+            </p>
+
+            <div>
+
+                <a href="#">
+                    プライバシーポリシー
+                </a>
+
+                <a href="#">
+                    お問い合わせ
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+<script src="js/shops.js"></script>
+
+</body>
+</html>

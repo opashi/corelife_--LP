@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>お知らせ | 整体 Core Life</title>
+    <meta name="description" content="整体 Core Lifeからのお知らせ詳細をご案内します。">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/news-detail.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <img src="images/logo.jpg" alt="整体 Core Life">
+        </a>
+
+        <nav class="pc-nav">
+            <a href="shops.html">店舗一覧</a>
+            <a href="index.html#about">Core Lifeについて</a>
+            <a href="index.html#menu">メニュー・料金</a>
+            <a href="index.html#point">選ばれる理由</a>
+            <a href="news.html">お知らせ</a>
+        </nav>
+
+        <a href="#" class="header-reserve">予約する</a>
+
+        <button class="menu-button" id="menuButton" aria-label="メニューを開く" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <nav>
+        <a href="shops.html">店舗一覧</a>
+        <a href="index.html#about">Core Lifeについて</a>
+        <a href="index.html#menu">メニュー・料金</a>
+        <a href="index.html#point">選ばれる理由</a>
+        <a href="news.html">お知らせ</a>
+        <a href="#" class="mobile-reserve">ご予約はこちら</a>
+    </nav>
+</div>
+
+<main>
+    <section class="detail-hero">
+        <div class="detail-hero-inner">
+            <p>NEWS</p>
+            <h1>お知らせ詳細</h1>
+        </div>
+    </section>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">ホーム</a>
+            <span>›</span>
+            <a href="news.html">お知らせ</a>
+            <span>›</span>
+            <span>詳細</span>
+        </div>
+    </div>
+
+    <section class="news-detail-section">
+        <article class="news-detail-card" aria-labelledby="detailTitle">
+            <div class="news-detail-meta">
+                <time id="detailDate"></time>
+                <span id="detailCategory"></span>
+            </div>
+
+            <h2 id="detailTitle"></h2>
+
+            <div class="news-detail-body" id="detailBody"></div>
+
+            <a href="news.html" class="news-detail-back">
+                <span>←</span>
+                お知らせ一覧へ戻る
+            </a>
+        </article>
+    </section>
+
+    <section class="detail-cta">
+        <div class="container">
+            <p>RESERVATION</p>
+            <h2>お身体のお悩みを<br>お気軽にご相談ください。</h2>
+            <a href="#" class="detail-cta-button">ご予約はこちら <span>→</span></a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>© Core Life All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const newsData = {
+        1: {
+            date: "2026.09.17",
+            category: "お知らせ",
+            title: "Core Life公式サイトをリニューアルしました。",
+            body: [
+                "Core Lifeの公式サイトをリニューアルしました。",
+                "店舗情報やメニュー、身体づくりに関する情報を、より分かりやすくお届けしていきます。"
+            ]
+        },
+        2: {
+            date: "2026.09.10",
+            category: "キャンペーン",
+            title: "秋の身体メンテナンスキャンペーンのお知らせ",
+            body: [
+                "季節の変わり目に合わせた身体メンテナンスキャンペーンを実施します。",
+                "詳しい内容やご予約については、お近くの店舗までお問い合わせください。"
+            ]
+        },
+        3: {
+            date: "2026.09.01",
+            category: "店舗情報",
+            title: "Core Life 新店舗オープンのお知らせ",
+            body: [
+                "Core Lifeに新しい店舗がオープンしました。",
+                "店舗一覧から場所や営業時間をご確認いただけます。"
+            ]
+        },
+        4: {
+            date: "2026.08.20",
+            category: "お知らせ",
+            title: "9月の営業日についてのお知らせ",
+            body: [
+                "9月の営業日をご案内します。",
+                "ご来店の際は、事前にご予約いただくとスムーズです。"
+            ]
+        },
+        5: {
+            date: "2026.08.05",
+            category: "キャンペーン",
+            title: "初めての方限定キャンペーンのご案内",
+            body: [
+                "初めてCore Lifeをご利用いただく方を対象にしたキャンペーンをご案内します。",
+                "身体の状態を確認し、一人ひとりに合わせた施術をご提案します。"
+            ]
+        },
+        6: {
+            date: "2026.07.25",
+            category: "店舗情報",
+            title: "彦根院の営業時間変更について",
+            body: [
+                "彦根院の営業時間を一部変更しました。",
+                "最新の営業時間は店舗一覧をご確認ください。"
+            ]
+        },
+        7: {
+            date: "2026.08.01",
+            category: "お知らせ",
+            title: "新しい施術メニューを開始しました。",
+            body: [
+                "身体の状態やお悩みに合わせた新しい施術メニューを開始しました。",
+                "メニュー・料金ページから詳しい内容をご確認いただけます。"
+            ]
+        }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const news = newsData[params.get("id")] || newsData[1];
+
+    document.title = `${news.title} | 整体 Core Life`;
+    document.getElementById("detailDate").textContent = news.date;
+    document.getElementById("detailDate").dateTime = news.date.replaceAll(".", "-");
+    document.getElementById("detailCategory").textContent = news.category;
+    document.getElementById("detailTitle").textContent = news.title;
+
+    const detailBody = document.getElementById("detailBody");
+    news.body.forEach(text => {
+        const paragraph = document.createElement("p");
+        paragraph.textContent = text;
+        detailBody.appendChild(paragraph);
+    });
+
+    const menuButton = document.getElementById("menuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuButton.addEventListener("click", () => {
+        const isOpen = mobileMenu.classList.toggle("active");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            mobileMenu.classList.remove("active");
+            menuButton.setAttribute("aria-expanded", "false");
+        });
+    });
+</script>
+
+</body>
+</html>
