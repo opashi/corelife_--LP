@@ -1464,7 +1464,12 @@ textarea {
         150px 0;
 
     background:
-        var(--color-white);
+        linear-gradient(
+            180deg,
+            var(--color-base-light) 0%,
+            var(--color-white) 48%,
+            var(--color-base-light) 100%
+        );
 
     overflow:
         hidden;
@@ -1489,6 +1494,22 @@ textarea {
     gap:
         60px;
 
+    position:
+        relative;
+
+    padding:
+        55px 60px;
+
+    background:
+        var(--color-white);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    box-shadow:
+        var(--shadow-light);
+
     margin-bottom:
         70px;
 }
@@ -1498,6 +1519,40 @@ textarea {
 
     flex:
         1 1 0;
+
+    position:
+        relative;
+
+    padding-left:
+        25px;
+
+    text-align:
+        left;
+}
+
+
+.reviews-intro .section-heading::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    top:
+        4px;
+
+    left:
+        0;
+
+    width:
+        3px;
+
+    height:
+        72px;
+
+    background:
+        var(--color-green);
 }
 
 
@@ -1515,12 +1570,58 @@ textarea {
     max-height:
         360px;
 
+    padding:
+        10px;
+
+    background:
+        var(--color-base);
+
+    border:
+        1px solid
+        var(--color-border);
+
+    box-shadow:
+        var(--shadow-hover);
+
     object-fit:
         contain;
+
+    object-position:
+        center;
+
+    transition:
+        transform 0.4s ease;
+}
+
+
+.reviews-main-image:hover {
+
+    transform:
+        translateY(-4px);
 }
 
 
 .reviews-slider {
+
+    position:
+        relative;
+
+    padding-top:
+        10px;
+
+    padding-bottom:
+        28px;
+
+    border-top:
+        1px solid
+        var(--color-border);
+
+    border-bottom:
+        1px solid
+        var(--color-border);
+
+    background:
+        rgba(255,255,255,0.55);
 
     display:
         flex;
@@ -1528,8 +1629,11 @@ textarea {
     gap:
         20px;
 
-    padding:
-        0 max(40px, calc((100vw - 1180px) / 2));
+    padding-left:
+        max(40px, calc((100vw - 1180px) / 2));
+
+    padding-right:
+        max(40px, calc((100vw - 1180px) / 2));
 
     overflow-x:
         auto;
@@ -1585,6 +1689,9 @@ textarea {
         1px solid
         var(--color-border);
 
+    border-radius:
+        4px;
+
     background:
         var(--color-base-light);
 
@@ -1593,6 +1700,20 @@ textarea {
 
     overflow:
         hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.review-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        var(--shadow-hover);
 }
 
 
@@ -2130,6 +2251,9 @@ textarea {
         gap:
             35px;
 
+        padding:
+            35px 24px;
+
         margin-bottom:
             50px;
     }
@@ -2139,6 +2263,9 @@ textarea {
 
         margin-bottom:
             0;
+
+        padding-left:
+            18px;
     }
 
 

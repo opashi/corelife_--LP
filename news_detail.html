@@ -21,6 +21,7 @@
 
         <nav class="pc-nav">
             <a href="shops.html">店舗一覧</a>
+            <a href="fc.html">加盟店ページ</a>
             <a href="index.html#about">Core Lifeについて</a>
             <a href="index.html#menu">メニュー・料金</a>
             <a href="index.html#point">選ばれる理由</a>
@@ -40,6 +41,7 @@
 <div class="mobile-menu" id="mobileMenu">
     <nav>
         <a href="shops.html">店舗一覧</a>
+        <a href="fc.html">加盟店ページ</a>
         <a href="index.html#about">Core Lifeについて</a>
         <a href="index.html#menu">メニュー・料金</a>
         <a href="index.html#point">選ばれる理由</a>
@@ -100,6 +102,8 @@
         </div>
     </div>
 </footer>
+
+<script src="js/site-settings.js"></script>
 
 <script>
     const newsData = {
@@ -169,7 +173,27 @@
     };
 
     const params = new URLSearchParams(window.location.search);
-    const news = newsData[params.get("id")] || newsData[1];
+    const newsId = Number(params.get("id"));
+    let news = newsData[newsId] || newsData[1];
+
+    try {
+        const savedNews = JSON.parse(localStorage.getItem("coreLifeNews"));
+        const savedItem = Array.isArray(savedNews)
+            ? savedNews.find(item => item.id === newsId)
+            : null;
+
+        if (savedItem) {
+            news = {
+                ...news,
+                date: savedItem.date.replaceAll("-", "."),
+                category: savedItem.category,
+                title: savedItem.title,
+                body: [savedItem.body]
+            };
+        }
+    } catch {
+        // Use the built-in content when local storage is unavailable.
+    }
 
     document.title = `${news.title} | 整体 Core Life`;
     document.getElementById("detailDate").textContent = news.date;

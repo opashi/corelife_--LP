@@ -1,0 +1,1129 @@
+/* ========================================
+   Core Life
+   Franchise Member Page
+======================================== */
+
+
+/* ----------------------------------------
+   Header
+---------------------------------------- */
+
+.fc-header {
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.fc-header .header-inner {
+    min-height: 78px;
+    gap: clamp(18px, 3vw, 40px);
+}
+
+.fc-header .logo-sub {
+    color: var(--color-green);
+}
+
+.fc-nav {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: auto;
+}
+
+
+/* ----------------------------------------
+   FC Navigation
+---------------------------------------- */
+
+.fc-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fc-nav li {
+    flex: 0 0 auto;
+}
+
+.fc-nav a {
+    display: block;
+    position: relative;
+
+    color: var(--color-text);
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.fc-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    bottom: -8px;
+    left: 0;
+
+    height: 2px;
+
+    background: var(--color-green);
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.3s ease;
+}
+
+.fc-nav a:hover::after,
+.fc-nav a.active::after {
+    transform: scaleX(1);
+}
+
+
+/* ----------------------------------------
+   User
+---------------------------------------- */
+
+.fc-user {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.fc-user-name {
+    color: var(--color-green);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.fc-logout {
+    padding: 8px 14px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+
+    color: var(--color-text-light);
+
+    font-size: 10px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.fc-logout:hover {
+    background: var(--color-base);
+    color: var(--color-green);
+}
+
+
+/* ----------------------------------------
+   Login
+---------------------------------------- */
+
+.fc-login-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(27, 27, 27, 0.46);
+}
+
+.fc-login-overlay[hidden] {
+    display: none;
+}
+
+.fc-login-card {
+    width: min(100%, 440px);
+    padding: 42px;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-hover);
+}
+
+.fc-login-card h2 {
+    margin: 0;
+    color: var(--color-black);
+    font-size: 28px;
+}
+
+.fc-login-card > p:not(.fc-hero-en):not(.fc-login-error) {
+    margin: 14px 0 25px;
+    color: var(--color-text-light);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.fc-login-card label {
+    display: grid;
+    gap: 7px;
+    margin-top: 16px;
+    color: var(--color-text-light);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.fc-login-card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    font: inherit;
+    font-size: 13px;
+}
+
+.fc-login-card button {
+    width: 100%;
+    margin-top: 24px;
+    padding: 14px;
+    border: 0;
+    background: var(--color-green);
+    color: var(--color-white);
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.fc-login-error {
+    margin: 14px 0 0;
+    color: #a24b4b;
+    font-size: 12px;
+}
+
+.fc-login-card small {
+    display: block;
+    margin-top: 18px;
+    color: var(--color-text-muted);
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+
+/* ----------------------------------------
+   Hero
+---------------------------------------- */
+
+.fc-hero {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            var(--color-base) 0%,
+            var(--color-base-light) 65%,
+            var(--color-white) 100%
+        );
+}
+
+.fc-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -180px;
+    top: -220px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--color-green-light);
+
+    pointer-events: none;
+}
+
+.fc-hero-inner {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1200px;
+    min-height: 380px;
+
+    margin: 0 auto;
+    padding: 70px 20px;
+}
+
+.fc-hero-text {
+    max-width: 650px;
+}
+
+.fc-hero-en {
+    margin: 0 0 14px;
+
+    color: var(--color-green);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.22em;
+}
+
+.fc-hero h1 {
+    margin: 0;
+
+    color: var(--color-black);
+
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+.fc-hero-description {
+    margin: 25px 0 0;
+
+    color: var(--color-text-light);
+
+    font-size: 14px;
+    line-height: 2;
+
+    letter-spacing: 0.04em;
+}
+
+
+/* ----------------------------------------
+   Hero Message
+---------------------------------------- */
+
+.fc-hero-message {
+    width: 300px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--color-green);
+
+    color: var(--color-white);
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 60px rgba(47, 125, 88, 0.16);
+}
+
+.fc-hero-message > span {
+    margin-bottom: 18px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.25em;
+}
+
+.fc-hero-message p {
+    margin: 0;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* ----------------------------------------
+   Main
+---------------------------------------- */
+
+.fc-main {
+    background: var(--color-white);
+}
+
+.fc-main .container {
+    padding-top: 100px;
+    padding-bottom: 110px;
+}
+
+
+/* ----------------------------------------
+   Section Heading
+---------------------------------------- */
+
+.fc-section-heading {
+    margin-bottom: 35px;
+}
+
+.fc-section-en {
+    margin: 0 0 10px;
+
+    color: var(--color-green);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+}
+
+.fc-section-heading h2 {
+    margin: 0;
+
+    color: var(--color-black);
+
+    font-size: clamp(25px, 4vw, 36px);
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+.fc-section-description {
+    margin: 15px 0 0;
+
+    color: var(--color-text-light);
+
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* ----------------------------------------
+   Welcome
+---------------------------------------- */
+
+.fc-welcome {
+    max-width: 800px;
+
+    margin: 0 auto 100px;
+
+    text-align: center;
+}
+
+.fc-welcome-text {
+    margin: 0;
+
+    color: var(--color-text-light);
+
+    font-size: 14px;
+    line-height: 2.2;
+}
+
+
+/* ----------------------------------------
+   Notice
+---------------------------------------- */
+
+.fc-notice {
+    max-width: 1000px;
+
+    margin: 0 auto 110px;
+
+    padding: 45px;
+
+    background: var(--color-base-light);
+
+    border: 1px solid var(--color-border);
+}
+
+.fc-notice-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.fc-notice-header p {
+    margin: 0 0 8px;
+
+    color: var(--color-green);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+}
+
+.fc-notice-header h2 {
+    margin: 0;
+
+    color: var(--color-black);
+
+    font-size: 23px;
+}
+
+.fc-notice-header > a {
+    color: var(--color-green);
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* ----------------------------------------
+   Notice List
+---------------------------------------- */
+
+.fc-notice-list {
+    border-top: 1px solid var(--color-border);
+}
+
+.fc-notice-item {
+    display: grid;
+
+    grid-template-columns: 100px 85px 1fr 20px;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 70px;
+
+    border-bottom: 1px solid var(--color-border);
+
+    color: var(--color-text);
+
+    transition:
+        background 0.3s ease,
+        padding 0.3s ease;
+}
+
+.fc-notice-item:hover {
+    padding-left: 8px;
+    padding-right: 8px;
+
+    background: var(--color-white);
+}
+
+.fc-notice-item time {
+    color: var(--color-text-muted);
+
+    font-size: 11px;
+}
+
+.fc-notice-category {
+    display: inline-flex;
+
+    justify-content: center;
+
+    width: 70px;
+
+    padding: 5px 8px;
+
+    border-radius: 3px;
+
+    background: var(--color-green-light);
+
+    color: var(--color-green);
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.fc-notice-item p {
+    margin: 0;
+
+    font-size: 13px;
+}
+
+.fc-arrow {
+    color: var(--color-green);
+
+    transition: transform 0.3s ease;
+}
+
+.fc-notice-item:hover .fc-arrow {
+    transform: translateX(4px);
+}
+
+
+/* ----------------------------------------
+   Menu Section
+---------------------------------------- */
+
+.fc-menu-section {
+    max-width: 1100px;
+
+    margin: 0 auto 110px;
+}
+
+.fc-menu-section > .fc-section-heading {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+/* ----------------------------------------
+   Menu Grid
+---------------------------------------- */
+
+.fc-menu-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+
+/* ----------------------------------------
+   Menu Card
+---------------------------------------- */
+
+.fc-menu-card {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 45px 70px 1fr 25px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    min-height: 210px;
+
+    padding: 28px;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+
+    color: var(--color-text);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.fc-menu-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--color-green-light);
+
+    box-shadow:
+        0 18px 40px rgba(47, 125, 88, 0.10);
+}
+
+
+/* ----------------------------------------
+   Large Card
+---------------------------------------- */
+
+.fc-menu-card-large {
+    grid-column: span 2;
+
+    min-height: 230px;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--color-base-light),
+            var(--color-white)
+        );
+}
+
+
+/* ----------------------------------------
+   Number
+---------------------------------------- */
+
+.fc-menu-number {
+    align-self: start;
+
+    color: var(--color-green);
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* ----------------------------------------
+   Icon
+---------------------------------------- */
+
+.fc-menu-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 50%;
+
+    background: var(--color-green);
+
+    color: var(--color-white);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* ----------------------------------------
+   Content
+---------------------------------------- */
+
+.fc-menu-content {
+    min-width: 0;
+}
+
+.fc-menu-en {
+    margin: 0 0 7px;
+
+    color: var(--color-green);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+.fc-menu-content h3 {
+    margin: 0;
+
+    color: var(--color-black);
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fc-menu-content > p:last-child {
+    margin: 12px 0 0;
+
+    color: var(--color-text-light);
+
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* ----------------------------------------
+   Arrow
+---------------------------------------- */
+
+.fc-menu-arrow {
+    color: var(--color-green);
+
+    font-size: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.fc-menu-card:hover .fc-menu-arrow {
+    transform: translateX(5px);
+}
+
+
+/* ----------------------------------------
+   Information
+---------------------------------------- */
+
+.fc-information {
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+.fc-information-box {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 60px;
+
+    padding: 55px;
+
+    background: var(--color-green);
+
+    color: var(--color-white);
+}
+
+.fc-information-title p {
+    margin: 0 0 10px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+}
+
+.fc-information-title h2 {
+    margin: 0;
+
+    font-size: 27px;
+    line-height: 1.5;
+}
+
+.fc-information-text > p {
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    font-size: 13px;
+    line-height: 2;
+}
+
+.fc-support-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 350px;
+
+    margin-top: 25px;
+
+    padding: 16px 20px;
+
+    background: var(--color-white);
+
+    color: var(--color-green);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.fc-support-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.fc-support-button span {
+    font-size: 18px;
+}
+
+
+/* ----------------------------------------
+   Footer
+---------------------------------------- */
+
+.fc-header + .fc-hero {
+    margin-top: 0;
+}
+
+
+/* ========================================
+   Responsive
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .fc-nav ul {
+        gap: 16px;
+    }
+
+    .fc-nav a {
+        font-size: 11px;
+    }
+
+    .fc-user {
+        gap: 10px;
+    }
+
+    .fc-user-name {
+        display: none;
+    }
+
+    .fc-hero-message {
+        width: 250px;
+        height: 250px;
+    }
+
+    .fc-menu-card {
+        grid-template-columns: 35px 60px 1fr 20px;
+
+        gap: 15px;
+
+        padding: 22px;
+    }
+
+    .fc-menu-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+}
+
+
+/* ========================================
+   Tablet
+======================================== */
+
+@media (max-width: 800px) {
+
+    .fc-nav,
+    .fc-user {
+        display: none;
+    }
+
+    .fc-header .menu-button {
+        display: flex;
+        flex: 0 0 42px;
+        margin-left: auto;
+    }
+
+    .fc-hero-inner {
+        min-height: auto;
+
+        padding: 70px 20px;
+    }
+
+    .fc-hero-message {
+        display: none;
+    }
+
+    .fc-main .container {
+        padding-top: 75px;
+        padding-bottom: 80px;
+    }
+
+    .fc-welcome {
+        margin-bottom: 75px;
+    }
+
+    .fc-notice {
+        margin-bottom: 75px;
+
+        padding: 30px;
+    }
+
+    .fc-menu-section {
+        margin-bottom: 75px;
+    }
+
+    .fc-information-box {
+        gap: 35px;
+
+        padding: 40px;
+    }
+
+}
+
+
+/* ========================================
+   Mobile
+======================================== */
+
+@media (max-width: 600px) {
+
+    .fc-login-card {
+        padding: 30px 22px;
+    }
+
+    .fc-hero-inner {
+        padding: 55px 20px;
+    }
+
+    .fc-hero h1 {
+        font-size: 34px;
+    }
+
+    .fc-hero-description {
+        font-size: 12px;
+    }
+
+
+    /* Main */
+
+    .fc-main .container {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+
+
+    /* Welcome */
+
+    .fc-welcome {
+        margin-bottom: 60px;
+    }
+
+    .fc-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .fc-welcome-text {
+        font-size: 12px;
+        line-height: 2;
+    }
+
+
+    /* Notice */
+
+    .fc-notice {
+        margin-bottom: 65px;
+
+        padding: 25px 18px;
+    }
+
+    .fc-notice-header {
+        align-items: flex-start;
+
+        margin-bottom: 20px;
+    }
+
+    .fc-notice-header h2 {
+        font-size: 19px;
+    }
+
+    .fc-notice-header > a {
+        font-size: 10px;
+    }
+
+    .fc-notice-item {
+        grid-template-columns: 1fr auto;
+
+        grid-template-areas:
+            "date category"
+            "title arrow";
+
+        gap: 7px 10px;
+
+        padding: 15px 0;
+    }
+
+    .fc-notice-item time {
+        grid-area: date;
+    }
+
+    .fc-notice-category {
+        grid-area: category;
+
+        justify-self: end;
+    }
+
+    .fc-notice-item p {
+        grid-area: title;
+
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    .fc-notice-item .fc-arrow {
+        grid-area: arrow;
+    }
+
+
+    /* Menu */
+
+    .fc-menu-section {
+        margin-bottom: 65px;
+    }
+
+    .fc-menu-section > .fc-section-heading {
+        margin-bottom: 30px;
+    }
+
+    .fc-menu-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .fc-menu-card,
+    .fc-menu-card-large {
+        grid-column: span 1;
+
+        display: grid;
+
+        grid-template-columns: 30px 48px 1fr 18px;
+
+        gap: 12px;
+
+        min-height: 170px;
+
+        padding: 18px 15px;
+    }
+
+    .fc-menu-icon {
+        width: 48px;
+        height: 48px;
+
+        font-size: 9px;
+    }
+
+    .fc-menu-content h3 {
+        font-size: 17px;
+    }
+
+    .fc-menu-content > p:last-child {
+        margin-top: 8px;
+
+        font-size: 10px;
+        line-height: 1.7;
+    }
+
+    .fc-menu-number {
+        font-size: 9px;
+    }
+
+    .fc-menu-en {
+        font-size: 7px;
+    }
+
+    .fc-menu-arrow {
+        font-size: 16px;
+    }
+
+
+    /* Information */
+
+    .fc-information-box {
+        display: block;
+
+        padding: 35px 25px;
+    }
+
+    .fc-information-title {
+        margin-bottom: 25px;
+    }
+
+    .fc-information-title h2 {
+        font-size: 24px;
+    }
+
+    .fc-information-text > p {
+        font-size: 11px;
+    }
+
+    .fc-support-button {
+        max-width: none;
+
+        font-size: 11px;
+    }
+
+
+    /* Fixed Buttons */
+
+    .mobile-fixed-buttons {
+        z-index: 999;
+    }
+
+}

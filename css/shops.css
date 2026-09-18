@@ -160,6 +160,61 @@
 
 
 /* ========================================
+   SHOP MAP
+======================================== */
+
+.shop-map-section {
+    padding: 40px 0 80px;
+    background: var(--color-base-light);
+}
+
+.shop-map-section .section-heading {
+    margin-bottom: 35px;
+}
+
+.shop-map {
+    position: relative;
+    min-height: 620px;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-base);
+    box-shadow: var(--shadow-light);
+}
+
+.shop-map-message {
+    display: grid;
+    place-items: center;
+    min-height: 620px;
+    margin: 0;
+    padding: 30px;
+    color: var(--color-text-light);
+    text-align: center;
+}
+
+.shop-map .leaflet-container {
+    font-family: inherit;
+}
+
+.shop-map .leaflet-popup-content {
+    margin: 12px 16px;
+    color: var(--color-text);
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.shop-map .leaflet-popup-content strong {
+    display: inline-block;
+    margin-bottom: 4px;
+    color: var(--color-green-dark);
+    font-size: 13px;
+}
+
+.shop-map .leaflet-popup-content span {
+    color: var(--color-text-light);
+    font-size: 11px;
+}
+
+/* ========================================
    SHOP LIST
 ======================================== */
 
@@ -217,6 +272,11 @@
     transform: translateY(-5px);
 
     box-shadow: var(--shadow-hover);
+}
+
+.shop-card.is-map-focused {
+    border-color: var(--color-green);
+    box-shadow: 0 0 0 3px var(--color-green-light), var(--shadow-hover);
 }
 
 .shop-image {
@@ -495,6 +555,18 @@
 
 
 @media (max-width: 600px) {
+
+    .shop-map-section {
+        padding: 20px 0 60px;
+    }
+
+    .shop-map {
+        min-height: 440px;
+    }
+
+    .shop-map-message {
+        min-height: 440px;
+    }
 
     .page-hero {
         margin-top: 70px;

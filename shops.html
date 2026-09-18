@@ -18,6 +18,11 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/shops.css">
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+    >
 </head>
 
 <body>
@@ -35,6 +40,10 @@
 
             <a href="shops.html">
                 店舗一覧
+            </a>
+
+            <a href="fc.html">
+                加盟店ページ
             </a>
 
             <a href="index.html#about">
@@ -77,6 +86,10 @@
 
         <a href="shops.html">
             店舗一覧
+        </a>
+
+        <a href="fc.html">
+            加盟店ページ
         </a>
 
         <a href="index.html#about">
@@ -213,27 +226,27 @@
                         すべて
                     </option>
 
-                    <option value="hikone">
+                    <option value="hikone" data-prefecture="shiga">
                         彦根市
                     </option>
 
-                    <option value="higashiomi">
+                    <option value="higashiomi" data-prefecture="shiga">
                         東近江市
                     </option>
 
-                    <option value="ritto">
+                    <option value="rittoh" data-prefecture="shiga">
                         栗東市
                     </option>
 
-                    <option value="minoh">
+                    <option value="minoh" data-prefecture="osaka">
                         箕面市
                     </option>
 
-                    <option value="nishi-tokyo">
+                    <option value="nishi-tokyo" data-prefecture="tokyo">
                         西東京市
                     </option>
 
-                    <option value="yatsushiro">
+                    <option value="yatsushiro" data-prefecture="kumamoto">
                         八代市
                     </option>
 
@@ -256,6 +269,29 @@
     </div>
 
 </section>
+
+
+<!-- SHOP MAP -->
+<section class="shop-map-section">
+
+    <div class="container">
+      
+        <div
+            id="shopMap"
+            class="shop-map"
+            role="application"
+            aria-label="Core Life店舗マップ"
+        >
+            <p class="shop-map-message">
+                Google Mapを読み込んでいます。
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
 
 
 <!-- SHOP LIST -->
@@ -281,6 +317,9 @@
                 class="shop-card"
                 data-prefecture="shiga"
                 data-area="hikone"
+                data-lat="35.2745"
+                data-lng="136.2596"
+                data-shop-name="整体Core Life 彦根院"
             >
 
                 <div class="shop-image">
@@ -376,6 +415,9 @@
                 class="shop-card"
                 data-prefecture="shiga"
                 data-area="higashiomi"
+                data-lat="35.1120"
+                data-lng="136.2010"
+                data-shop-name="整体Core Life まい整体院"
             >
 
                 <div class="shop-image">
@@ -471,6 +513,9 @@
                 class="shop-card"
                 data-prefecture="shiga"
                 data-area="rittoh"
+                data-lat="35.0210"
+                data-lng="135.9980"
+                data-shop-name="整体Core Life さつき整体院"
             >
 
                 <div class="shop-image">
@@ -568,6 +613,9 @@
                 class="shop-card"
                 data-prefecture="shiga"
                 data-area="higashiomi"
+                data-lat="35.1560"
+                data-lng="136.2790"
+                data-shop-name="整体Core Life よつば整体院"
             >
 
                 <div class="shop-image">
@@ -665,6 +713,9 @@
                 class="shop-card"
                 data-prefecture="tokyo"
                 data-area="nishi-tokyo"
+                data-lat="35.7250"
+                data-lng="139.5380"
+                data-shop-name="整体Core Life 鍼灸マッサージ治療室とつかや"
             >
 
                 <div class="shop-image">
@@ -762,6 +813,9 @@
                 class="shop-card"
                 data-prefecture="osaka"
                 data-area="minoh"
+                data-lat="34.8269"
+                data-lng="135.4706"
+                data-shop-name="整体Core Life Minohけいすけ整体院"
             >
 
                 <div class="shop-image">
@@ -859,6 +913,9 @@
                 class="shop-card"
                 data-prefecture="kumamoto"
                 data-area="yatsushiro"
+                data-lat="32.5070"
+                data-lng="130.6010"
+                data-shop-name="整体Core Life 道田整体院"
             >
 
                 <div class="shop-image">
@@ -1048,6 +1105,10 @@
                     店舗一覧
                 </a>
 
+                <a href="fc.html">
+                    加盟店ページ
+                </a>
+
                 <a href="index.html#news">
                     お知らせ
                 </a>
@@ -1087,6 +1148,12 @@
 
 
 <script src="js/script.js"></script>
+<script src="js/site-settings.js"></script>
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+></script>
 <script src="js/shops.js"></script>
 
 </body>

@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>加盟店ページ | Core Life</title>
+
+    <meta
+        name="description"
+        content="Core Life加盟店専用ページです。研修動画、研修日程、交流会、マニュアル、FC契約要項、成果事例をご確認いただけます。"
+    >
+
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 加盟店ページCSS -->
+    <link rel="stylesheet" href="css/fc.css">
+</head>
+
+<body class="fc-page">
+
+<!-- ========================================
+     Header
+======================================== -->
+
+<header class="header fc-header">
+
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+          <img src="images/logo.jpg" alt="Core Life ロゴ">
+        </a>
+
+        <nav class="global-nav fc-nav">
+
+            <ul>
+
+                <li>
+                    <a href="fc.html" class="active">
+                        HOME
+                    </a>
+                </li>
+
+                <li>
+                    <a href="fc-training.html">
+                        研修
+                    </a>
+                </li>
+
+                <li>
+                    <a href="fc-manual.html">
+                        マニュアル
+                    </a>
+                </li>
+
+                <li>
+                    <a href="fc-contract.html">
+                        FC契約
+                    </a>
+                </li>
+
+                <li>
+                    <a href="fc-results.html">
+                        成果事例
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="fc-user">
+
+            <span class="fc-user-name">
+                加盟店様
+            </span>
+
+            <a href="#" class="fc-logout">
+                ログアウト
+            </a>
+
+        </div>
+
+        <button
+            class="menu-button"
+            aria-label="メニューを開く"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </div>
+
+</header>
+
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <nav>
+        <a href="fc.html">HOME</a>
+        <a href="fc-training.html">研修</a>
+        <a href="fc-schedule.html">研修日程</a>
+        <a href="fc-meeting.html">交流会日程</a>
+        <a href="fc-manual.html">マニュアル</a>
+        <a href="fc-contract.html">FC契約</a>
+        <a href="fc-results.html">成果事例</a>
+        <a href="fc-support.html" class="mobile-reserve">サポートへ問い合わせる</a>
+    </nav>
+
+</div>
+
+
+<div class="fc-login-overlay" id="fcLoginOverlay">
+    <form class="fc-login-card" id="fcLoginForm">
+        <p class="fc-hero-en">FRANCHISE MEMBER LOGIN</p>
+        <h2>加盟店ログイン</h2>
+        <p>管理画面で登録した加盟店IDとパスワードを入力してください。</p>
+        <label>
+            ログインID
+            <input type="text" name="loginId" autocomplete="username" required>
+        </label>
+        <label>
+            パスワード
+            <input type="password" name="password" autocomplete="current-password" required>
+        </label>
+        <p class="fc-login-error" id="fcLoginError" hidden></p>
+        <button type="submit">ログイン</button>
+        <small>この簡易ログインはlocalStorageを利用しています。本番環境ではサーバー認証へ移行してください。</small>
+    </form>
+</div>
+
+
+<!-- ========================================
+     Page Hero
+======================================== -->
+
+<section class="fc-hero">
+
+    <div class="fc-hero-inner">
+
+        <div class="fc-hero-text">
+
+            <p class="fc-hero-en">
+                FRANCHISE MEMBER
+            </p>
+
+            <h1>
+                加盟店ページ
+            </h1>
+
+            <p class="fc-hero-description">
+                Core Life加盟店の皆さまへ。<br>
+                研修・マニュアル・最新情報をご確認いただけます。
+            </p>
+
+        </div>
+
+        <div class="fc-hero-message">
+
+            <span>
+                CORE LIFE
+            </span>
+
+            <p>
+                ともに学び、<br>
+                ともに成長する。
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================
+     Breadcrumb
+======================================== -->
+
+<div class="breadcrumb">
+
+    <div class="container">
+
+        <a href="index.html">
+            ホーム
+        </a>
+
+        <span>›</span>
+
+        <span>
+            加盟店ページ
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- ========================================
+     Main
+======================================== -->
+
+<main class="fc-main">
+
+    <div class="container">
+
+
+        <!-- =================================
+             Welcome
+        ================================== -->
+
+        <section class="fc-welcome">
+
+            <div class="fc-section-heading">
+
+                <p class="fc-section-en">
+                    WELCOME
+                </p>
+
+                <h2>
+                    加盟店の皆さまへ
+                </h2>
+
+            </div>
+
+            <p class="fc-welcome-text">
+
+                Core Life加盟店専用ページへようこそ。<br>
+                こちらから研修動画や研修日程、マニュアルなど、
+                店舗運営に必要な情報をご確認いただけます。
+
+            </p>
+
+        </section>
+
+
+        <!-- =================================
+             Important Information
+        ================================== -->
+
+        <section class="fc-notice">
+
+            <div class="fc-notice-header">
+
+                <div>
+
+                    <p>
+                        IMPORTANT
+                    </p>
+
+                    <h2>
+                        最新のお知らせ
+                    </h2>
+
+                </div>
+
+                <a href="#">
+                    すべて見る →
+                </a>
+
+            </div>
+
+
+            <div class="fc-notice-list">
+
+                <a href="#" class="fc-notice-item">
+
+                    <time datetime="2026-09-18">
+                        2026.09.18
+                    </time>
+
+                    <span class="fc-notice-category">
+                        お知らせ
+                    </span>
+
+                    <p>
+                        10月開催の加盟店研修についてのお知らせ
+                    </p>
+
+                    <span class="fc-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a href="#" class="fc-notice-item">
+
+                    <time datetime="2026-09-10">
+                        2026.09.10
+                    </time>
+
+                    <span class="fc-notice-category">
+                        研修
+                    </span>
+
+                    <p>
+                        新しい研修動画を追加しました
+                    </p>
+
+                    <span class="fc-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <a href="#" class="fc-notice-item">
+
+                    <time datetime="2026-09-01">
+                        2026.09.01
+                    </time>
+
+                    <span class="fc-notice-category">
+                        交流会
+                    </span>
+
+                    <p>
+                        次回加盟店交流会の日程が決定しました
+                    </p>
+
+                    <span class="fc-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             Main Menu
+        ================================== -->
+
+        <section class="fc-menu-section">
+
+            <div class="fc-section-heading">
+
+                <p class="fc-section-en">
+                    MEMBER MENU
+                </p>
+
+                <h2>
+                    加盟店専用コンテンツ
+                </h2>
+
+                <p class="fc-section-description">
+                    店舗運営やスキルアップに必要な情報をご確認いただけます。
+                </p>
+
+            </div>
+
+
+            <div class="fc-menu-grid">
+
+
+                <!-- Training Video -->
+
+                <a
+                    href="fc-training.html"
+                    class="fc-menu-card fc-menu-card-large"
+                >
+
+                    <div class="fc-menu-number">
+                        01
+                    </div>
+
+                    <div class="fc-menu-icon">
+                        ▶
+                    </div>
+
+                    <div class="fc-menu-content">
+
+                        <p class="fc-menu-en">
+                            TRAINING VIDEO
+                        </p>
+
+                        <h3>
+                            研修動画
+                        </h3>
+
+                        <p>
+                            Core Lifeの技術・接客・店舗運営など、
+                            加盟店向けの研修動画をご覧いただけます。
+                        </p>
+
+                    </div>
+
+                    <span class="fc-menu-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- Training Schedule -->
+
+                <a
+                    href="fc-schedule.html"
+                    class="fc-menu-card"
+                >
+
+                    <div class="fc-menu-number">
+                        02
+                    </div>
+
+                    <div class="fc-menu-icon">
+                        CAL
+                    </div>
+
+                    <div class="fc-menu-content">
+
+                        <p class="fc-menu-en">
+                            TRAINING
+                        </p>
+
+                        <h3>
+                            研修日程
+                        </h3>
+
+                        <p>
+                            今後開催される研修の
+                            日程をご確認いただけます。
+                        </p>
+
+                    </div>
+
+                    <span class="fc-menu-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- Exchange -->
+
+                <a
+                    href="fc-meeting.html"
+                    class="fc-menu-card"
+                >
+
+                    <div class="fc-menu-number">
+                        03
+                    </div>
+
+                    <div class="fc-menu-icon">
+                        +
+                    </div>
+
+                    <div class="fc-menu-content">
+
+                        <p class="fc-menu-en">
+                            COMMUNITY
+                        </p>
+
+                        <h3>
+                            交流会日程
+                        </h3>
+
+                        <p>
+                            加盟店同士で情報交換を行う
+                            交流会の日程をご案内します。
+                        </p>
+
+                    </div>
+
+                    <span class="fc-menu-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- Contract -->
+
+                <a
+                    href="fc-contract.html"
+                    class="fc-menu-card"
+                >
+
+                    <div class="fc-menu-number">
+                        04
+                    </div>
+
+                    <div class="fc-menu-icon">
+                        DOC
+                    </div>
+
+                    <div class="fc-menu-content">
+
+                        <p class="fc-menu-en">
+                            FRANCHISE CONTRACT
+                        </p>
+
+                        <h3>
+                            FC契約要項
+                        </h3>
+
+                        <p>
+                            フランチャイズ契約に関する
+                            各種情報をご確認いただけます。
+                        </p>
+
+                    </div>
+
+                    <span class="fc-menu-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- Manual -->
+
+                <a
+                    href="fc-manual.html"
+                    class="fc-menu-card"
+                >
+
+                    <div class="fc-menu-number">
+                        05
+                    </div>
+
+                    <div class="fc-menu-icon">
+                        ≡
+                    </div>
+
+                    <div class="fc-menu-content">
+
+                        <p class="fc-menu-en">
+                            MANUAL
+                        </p>
+
+                        <h3>
+                            マニュアル一覧
+                        </h3>
+
+                        <p>
+                            店舗運営・接客・施術などの
+                            各種マニュアルをご確認いただけます。
+                        </p>
+
+                    </div>
+
+                    <span class="fc-menu-arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+                <!-- Results -->
+
+                <a
+                    href="fc-results.html"
+                    class="fc-menu-card"
+                >
+
+                    <div class="fc-menu-number">
+                        06
+                    </div>
+
+                    <div class="fc-menu-icon">
+                        ↗
+                    </div>
+
+                    <div class="fc-menu-content">
+
+                        <p class="fc-menu-en">
+                            SUCCESS STORIES
+                        </p>
+
+                        <h3>
+                            成果掲載
+                        </h3>
+
+                        <p>
+                            加盟店の取り組みや成果、
+                            成功事例をご紹介します。
+                        </p>
+
+                    </div>
+
+                    <span class="fc-menu-arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================
+             Quick Information
+        ================================== -->
+
+        <section class="fc-information">
+
+            <div class="fc-information-box">
+
+                <div class="fc-information-title">
+
+                    <p>
+                        MEMBER SUPPORT
+                    </p>
+
+                    <h2>
+                        加盟店サポート
+                    </h2>
+
+                </div>
+
+                <div class="fc-information-text">
+
+                    <p>
+                        店舗運営についてのお困りごとや、
+                        システム・研修に関するご質問は
+                        加盟店サポートまでお問い合わせください。
+                    </p>
+
+                    <a href="#" class="fc-support-button">
+                        サポートへ問い合わせる
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- ========================================
+     Footer
+======================================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-inner">
+
+            <div class="footer-brand">
+
+                <a
+                    href="index.html"
+                    class="footer-logo"
+                >
+                    Core Life
+                </a>
+
+                <p>
+                    加盟店専用ページ
+                </p>
+
+            </div>
+
+
+            <div class="footer-nav">
+
+                <div>
+
+                    <p class="footer-nav-title">
+                        MEMBER
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <a href="fc.html">
+                                加盟店トップ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fc-training.html">
+                                研修動画
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fc-schedule.html">
+                                研修日程
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fc-meeting.html">
+                                交流会日程
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div>
+
+                    <p class="footer-nav-title">
+                        INFORMATION
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <a href="fc-contract.html">
+                                FC契約要項
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fc-manual.html">
+                                マニュアル一覧
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="fc-results.html">
+                                成果掲載
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="admin.html">
+                                管理画面
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © Core Life All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- ========================================
+     Mobile Fixed Buttons
+======================================== -->
+
+<div class="mobile-fixed-buttons">
+
+    <a
+        href="fc-support.html"
+        class="mobile-phone-button"
+    >
+        <span>?</span>
+        サポート
+    </a>
+
+    <a
+        href="fc.html"
+        class="mobile-reservation-button"
+    >
+        <span>⌂</span>
+        HOME
+    </a>
+
+</div>
+
+
+<script src="js/script.js"></script>
+<script src="js/site-settings.js"></script>
+
+</body>
+</html>

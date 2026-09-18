@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>管理者画面 | Core Life</title>
+    <meta name="description" content="Core Lifeサイト管理者画面">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<header class="admin-header">
+    <div class="admin-header-inner">
+        <a href="index.html" class="admin-brand">
+            <span class="admin-brand-mark">CL</span>
+            <span>
+                <strong>Core Life</strong>
+                <small>管理者画面</small>
+            </span>
+        </a>
+
+        <div class="admin-header-actions">
+            <a href="index.html" class="admin-link">公開サイト</a>
+            <button type="button" class="admin-icon-button" id="resetAllButton">初期化</button>
+        </div>
+    </div>
+</header>
+
+<main class="admin-main">
+    <div class="admin-container">
+        <div class="admin-page-heading">
+            <div>
+                <p class="admin-eyebrow">SITE CONTROL CENTER</p>
+                <h1>サイト管理</h1>
+                <p>NEWSと加盟店ページの内容を管理できます。</p>
+            </div>
+            <div class="admin-status" id="saveStatus" aria-live="polite">未保存の変更はありません</div>
+        </div>
+
+        <div class="admin-layout">
+            <aside class="admin-sidebar" aria-label="管理メニュー">
+                <button type="button" class="admin-tab active" data-panel="newsPanel">
+                    <span>01</span>
+                    NEWS管理
+                </button>
+                <button type="button" class="admin-tab" data-panel="fcPanel">
+                    <span>02</span>
+                    加盟店管理
+                </button>
+                <button type="button" class="admin-tab" data-panel="fcSettingsPanel">
+                    <span>03</span>
+                    FCページ設定
+                </button>
+                <button type="button" class="admin-tab" data-panel="previewPanel">
+                    <span>04</span>
+                    プレビュー
+                </button>
+            </aside>
+
+            <div class="admin-content">
+                <section class="admin-panel active" id="newsPanel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="admin-eyebrow">NEWS MANAGEMENT</p>
+                            <h2>お知らせを管理</h2>
+                        </div>
+                        <button type="button" class="admin-primary-button" id="addNewsButton">お知らせを追加</button>
+                    </div>
+
+                    <div class="news-editor-list" id="newsEditorList"></div>
+                </section>
+
+                <section class="admin-panel" id="fcPanel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="admin-eyebrow">SHOP MANAGEMENT</p>
+                            <h2>加盟店を管理</h2>
+                        </div>
+                        <button type="button" class="admin-primary-button" id="addShopButton">加盟店を追加</button>
+                    </div>
+
+                    <div class="shop-editor-list" id="shopEditorList"></div>
+                    <p class="admin-note">店舗のログイン情報は、静的サイトではlocalStorageに保存されます。本番運用ではサーバー側の認証を利用してください。</p>
+                </section>
+
+                <section class="admin-panel" id="fcSettingsPanel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="admin-eyebrow">FRANCHISE PAGE</p>
+                            <h2>加盟店ページ設定</h2>
+                        </div>
+                    </div>
+
+                    <form class="admin-form" id="fcSettingsForm">
+                        <label>
+                            ページ見出し
+                            <input type="text" name="heroTitle" required>
+                        </label>
+                        <label>
+                            ページ説明
+                            <textarea name="heroDescription" rows="3" required></textarea>
+                        </label>
+                        <label>
+                            ウェルカム見出し
+                            <input type="text" name="welcomeTitle" required>
+                        </label>
+                        <label>
+                            ウェルカム本文
+                            <textarea name="welcomeText" rows="4" required></textarea>
+                        </label>
+                        <label>
+                            サポート見出し
+                            <input type="text" name="supportTitle" required>
+                        </label>
+                        <label>
+                            サポート本文
+                            <textarea name="supportText" rows="4" required></textarea>
+                        </label>
+                        <button type="submit" class="admin-primary-button">FC設定を保存</button>
+                    </form>
+                </section>
+
+                <section class="admin-panel" id="previewPanel">
+                    <div class="panel-heading">
+                        <div>
+                            <p class="admin-eyebrow">PUBLIC PAGES</p>
+                            <h2>公開ページを確認</h2>
+                        </div>
+                    </div>
+
+                    <div class="preview-grid">
+                        <a href="news.html" class="preview-card">
+                            <span>NEWS</span>
+                            <strong>お知らせ一覧</strong>
+                            <small>公開中のニュースを確認</small>
+                        </a>
+                        <a href="fc.html" class="preview-card">
+                            <span>FRANCHISE</span>
+                            <strong>加盟店ページ</strong>
+                            <small>FC向けページを確認</small>
+                        </a>
+                        <a href="index.html" class="preview-card">
+                            <span>HOME</span>
+                            <strong>公式サイト</strong>
+                            <small>トップページを確認</small>
+                        </a>
+                    </div>
+
+                    <div class="admin-note">
+                        <strong>保存について</strong>
+                        <p>この管理画面の設定は、このブラウザのlocalStorageに保存されます。複数端末や他の利用者と共有する場合は、サーバー側の管理機能が必要です。</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="admin-toast" id="adminToast" role="status" aria-live="polite"></div>
+<script src="js/admin.js"></script>
+</body>
+</html>
