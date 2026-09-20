@@ -262,11 +262,48 @@
     }
 
     .menu-list-body h2 {
-        font-size: 22px;
+        font-size: 18px;
     }
 
     .menu-cta {
         padding: 70px 20px;
+    }
+
+    .menu-list-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .menu-list-description {
+        flex: 1;
+    }
+
+    .menu-list-body h2 {
+        font-size: 16px;
+    }
+
+    .menu-list-body h3 {
+        font-size: 14px;
+    }
+
+    .menu-list-price {
+        flex: 0 0 60px;
+        text-align: end;
+    }
+
+    .menu-list-price span:first-child {
+        margin-bottom: 6px;
+        font-size: 9px;
+    }
+
+    .menu-list-price strong {
+        font-size: 16px;
+    }
+
+    .menu-list-price span:last-child {
+        font-size: 10px;
+        margin-left: 2px;
     }
 
 }
