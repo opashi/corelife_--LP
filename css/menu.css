@@ -1,0 +1,272 @@
+/* ========================================
+   MENU PAGE HERO
+======================================== */
+
+.menu-page-hero {
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:
+        linear-gradient(
+            rgba(22,77,50,0.78),
+            rgba(47,125,88,0.68)
+        ),
+        url("../images/hero.jpg")
+        center / cover no-repeat;
+
+    color: var(--color-white);
+}
+
+.page-hero-inner {
+    width: 100%;
+    max-width: 1200px;
+    padding: 80px 20px;
+    margin: 0 auto;
+}
+
+.page-hero-en {
+    margin: 0 0 14px;
+    color: var(--color-green);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.page-hero h1 {
+    margin: 0;
+    color: var(--color-white);
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.page-hero-description {
+    margin: 20px 0 0;
+    color: var(--color-text-light);
+    font-size: 15px;
+    letter-spacing: 0.08em;
+}
+
+
+/* ----------------------------------------
+   Breadcrumb
+---------------------------------------- */
+
+.breadcrumb {
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--color-border);
+
+    font-size: 11px;
+
+    color: var(--color-text-muted);
+}
+
+.breadcrumb .container {
+    display: flex;
+
+    gap: 15px;
+}
+
+.breadcrumb a {
+    color: var(--color-text);
+}
+
+
+/* ========================================
+   MENU LIST
+======================================== */
+
+.menu-list-section {
+    padding: 100px 0 150px;
+}
+
+.menu-list-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.menu-list-note {
+    margin-bottom: 50px;
+
+    color: var(--color-text-muted);
+    font-size: 12px;
+    text-align: center;
+}
+
+.menu-list {
+    max-width: 900px;
+    margin: 0 auto;
+
+    border-top: 1px solid var(--color-border);
+}
+
+.menu-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    padding: 20px 10px;
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.menu-list-body {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.menu-list-body .menu-category {
+    display: block;
+    margin-bottom: 12px;
+}
+
+.menu-list-body h2 {
+    color: var(--color-black);
+    font-size: clamp(20px, 2.4vw, 25px);
+    margin-bottom: 0px;
+}
+
+.menu-list-body h3 {
+    color: var(--color-green-dark);
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.menu-list-description {
+    color: var(--color-text-light);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.menu-list-price {
+    flex: 0 0 150px;
+
+    text-align: right;
+    white-space: nowrap;
+}
+
+.menu-list-price span:first-child {
+    display: block;
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 11px;
+}
+
+.menu-list-price strong {
+    color: var(--color-green-dark);
+    font-size: 30px;
+}
+
+.menu-list-price span:last-child {
+    margin-left: 4px;
+
+    color: var(--color-text-light);
+    font-size: 13px;
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.menu-cta {
+    padding: 110px 20px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("../images/hero.jpg")
+        center / cover no-repeat;
+
+    text-align: center;
+
+    color: var(--color-white);
+}
+
+.menu-cta > .container > p {
+    font-size: 11px;
+    letter-spacing: 0.3em;
+    margin-bottom: 20px;
+}
+
+.menu-cta h2 {
+    font-size: clamp(28px, 4vw, 46px);
+    line-height: 1.5;
+}
+
+.menu-cta .cta-button {
+    display: inline-flex;
+    gap: 50px;
+
+    margin-top: 35px;
+    padding: 18px 40px;
+
+    background: var(--color-white);
+    color: var(--color-black);
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.menu-cta .cta-button:hover {
+    background: var(--color-green);
+    color: var(--color-white);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+
+    .menu-page-hero {
+        height: 300px;
+    }
+
+    .menu-list-section {
+        padding: 70px 0 100px;
+    }
+
+    .menu-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        padding: 35px 5px;
+    }
+
+    .menu-list-price {
+        text-align: left;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .menu-page-hero {
+        margin-top: 70px;
+        height: 260px;
+    }
+
+    .menu-list-section {
+        padding: 50px 0 70px;
+    }
+
+    .menu-list-body h2 {
+        font-size: 22px;
+    }
+
+    .menu-cta {
+        padding: 70px 20px;
+    }
+
+}
