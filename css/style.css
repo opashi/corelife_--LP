@@ -852,6 +852,30 @@ textarea {
 }
 
 
+/* ========================================
+   BREADCRUMB
+======================================== */
+
+.breadcrumb {
+    padding: 20px 0;
+
+    border-bottom: 1px solid var(--color-border);
+
+    font-size: 11px;
+
+    color: var(--color-text-muted);
+}
+
+.breadcrumb .container {
+    display: flex;
+
+    gap: 15px;
+}
+
+.breadcrumb a {
+    color: var(--color-text);
+}
+
 /* =========================================================
    MENU
 ========================================================= */
@@ -2174,7 +2198,7 @@ textarea {
     .logo img {
 
         width:
-            100%;
+            60%;
     }
 
 
@@ -2397,9 +2421,6 @@ textarea {
 
         display:
             grid;
-
-        grid-template-columns:
-            1fr 1fr;
 
         position:
             fixed;
